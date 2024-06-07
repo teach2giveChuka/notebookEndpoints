@@ -52,13 +52,12 @@ let getAllNotes = async (req: Request, res: Response) => {
 export async function updateNote(req: Request, res: Response) {
     try {
         let note_id = req.params.note_id
-
         let { title, content } = req.body
-
         let note = {
-            id: note_id,
+            note_id: note_id,
             title,
-            content
+            content,
+            
         }
 
         let response = await noteService.updateNote(note_id, note);

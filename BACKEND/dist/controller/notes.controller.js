@@ -64,9 +64,9 @@ function updateNote(req, res) {
             let note_id = req.params.note_id;
             let { title, content } = req.body;
             let note = {
-                id: note_id,
+                note_id: note_id,
                 title,
-                content
+                content,
             };
             let response = yield noteService.updateNote(note_id, note);
             return res.json(response);

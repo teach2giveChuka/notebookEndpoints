@@ -1,0 +1,5 @@
+DELETE OR ALTER PROCEDURE getAllNotes
+AS
+BEGIN
+    DELETE * FROM notes
+END
